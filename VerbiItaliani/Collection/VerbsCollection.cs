@@ -17,6 +17,7 @@ namespace VerbiItaliani.Collection
 
             CreateVerb("andare", new []{ "vado", "vai", "va", "andiamo", "andate", "vanno" });
             CreateVerb("parlare");
+            CreateVerb("prendere");
             CreateVerb("mettersi");
             CreateVerb("credere");
             CreateVerb("bere", false, "bev");
