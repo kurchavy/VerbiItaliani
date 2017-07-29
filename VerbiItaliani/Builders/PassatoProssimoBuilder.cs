@@ -21,6 +21,7 @@ namespace VerbiItaliani.Builders
                         _form = Core + "uto";
                         break;
                     case Conjugations.III:
+                    case Conjugations.IIIisc:
                         _form = Core + "ito";
                         break;
                 }

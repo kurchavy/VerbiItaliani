@@ -7,13 +7,17 @@ namespace VerbiItaliani
     {
         public string Infinitivo { get; }
 
+        public bool IsInDictionary { get; }
+
         protected ITenseBuilder PresenteBuilder;
         protected ITenseBuilder GerundioBuilder;
         protected ITenseBuilder PassatoProssimoBuilder;
 
-        public Verb(string inf, ITenseBuilder bldPresente, ITenseBuilder bldGerundio, ITenseBuilder bldPassato)
+        public Verb(string inf, bool isInDictionary, ITenseBuilder bldPresente, ITenseBuilder bldGerundio, ITenseBuilder bldPassato)
         {
             Infinitivo = inf.ToLowerInvariant();
+
+            IsInDictionary = isInDictionary;
 
             PresenteBuilder = bldPresente;
             GerundioBuilder = bldGerundio;
@@ -33,19 +37,18 @@ namespace VerbiItaliani
             };
         }
 
-        public IEnumerable<string> Gerundio()
+        public IEnumerable<string> StarePlusGerundio()
         {
             return new List<string>
             {
-                Gerundio(Persons.First, Numbers.Singular, Genders.M),
-                Gerundio(Persons.Second, Numbers.Singular, Genders.M),
-                Gerundio(Persons.Third, Numbers.Singular, Genders.M),
-                Gerundio(Persons.First, Numbers.Plural, Genders.M),
-                Gerundio(Persons.Second, Numbers.Plural, Genders.M),
-                Gerundio(Persons.Third, Numbers.Plural, Genders.M),
+                StarePlusGerundio(Persons.First, Numbers.Singular, Genders.M),
+                StarePlusGerundio(Persons.Second, Numbers.Singular, Genders.M),
+                StarePlusGerundio(Persons.Third, Numbers.Singular, Genders.M),
+                StarePlusGerundio(Persons.First, Numbers.Plural, Genders.M),
+                StarePlusGerundio(Persons.Second, Numbers.Plural, Genders.M),
+                StarePlusGerundio(Persons.Third, Numbers.Plural, Genders.M),
             };
         }
-
         public IEnumerable<string> PassatoProssimo()
         {
             return new List<string>
@@ -64,7 +67,7 @@ namespace VerbiItaliani
             return PresenteBuilder.GetForm(person, number, gender);
         }
 
-        public string Gerundio(Persons person, Numbers number, Genders gender)
+        public string StarePlusGerundio(Persons person, Numbers number, Genders gender)
         {
             return GerundioBuilder.GetForm(person, number, gender);
         }

@@ -46,7 +46,6 @@
     <Compile Include="Builders\GerundioBuilder.cs" />
     <Compile Include="Builders\PassatoProssimoBuilder.cs" />
     <Compile Include="Builders\PresenteBuilder.cs" />
-    <Compile Include="Builders\PresenteIrregularBuilder.cs" />
     <Compile Include="Collection\VerbsCollection.cs" />
     <Compile Include="Conjugations.cs" />
     <Compile Include="ITenseBuilder.cs" />
