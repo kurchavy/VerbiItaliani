@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builders\GerundioBuilderTests.cs" />
+    <Compile Include="Builders\PassatoProssimoBuilderTests.cs" />
     <Compile Include="Builders\PresenteBuilderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

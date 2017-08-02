@@ -16,6 +16,7 @@ namespace VerbiItaliani.Tests.Builders
         [TestCase("spiegare", new[] { "spiego", "spieghi", "spiega", "spieghiamo", "spiegate", "spiegano" })]
         [TestCase("vincere", new[] { "vinco", "vinci", "vince", "vinciamo", "vincete", "vincono" })]
         [TestCase("scegliere", new[] { "scelgo", "scegli", "sceglie", "scegliamo", "scegliete", "scelgono" })]
+        [TestCase("fare", new[] { "faccio", "fai", "fa", "facciamo", "fate", "fanno" })]
         public void GetForm_ReturnsRightResults(string inf, string[] results)
         {
             var verb = VerbsCollection.Get(inf);
